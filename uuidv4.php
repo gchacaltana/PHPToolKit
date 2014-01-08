@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Generate GUID version 4
+ * Generate UUID version 4
  * @author Gonzalo Chacaltana <gchacaltanab@outlook.com>
  */
 
-//Generate GUID v4
-function generateGuidv4()
+//Generate UUID v4
+function generateUuidv4()
 {
     return sprintf('%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
     // 32 bits for "time_low"
@@ -24,4 +24,4 @@ function generateGuidv4()
     mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
     );
 }
-echo generateGuidv4();
+echo generateUuidv4();
