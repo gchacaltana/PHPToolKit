@@ -6,11 +6,8 @@
 public static function checkTimeZone($timezone)
 {
     if (!empty($timezone)) {
-        $listTimeZone = DateTimeZone::listIdentifiers(DateTimeZone::ALL);
-        foreach ($listTimeZone as $row) {
-            if ($row === $timezone) {
-                return true;
-            }
+        if (in_array($timezone, DateTimeZone::listIdentifiers(DateTimeZone::ALL))) {
+            return true;
         }
     }
     return false;
